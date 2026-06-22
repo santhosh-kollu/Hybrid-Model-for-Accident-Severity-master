@@ -1,0 +1,56 @@
+// Hybrid Ensemble Model Pipeline
+digraph {
+	bgcolor=white dpi=300 rankdir=TB size="8,12" splines=ortho
+	node [fixedsize=false fontname=Arial fontsize=12 margin=0.2 penwidth=2 shape=box style="filled,rounded"]
+	edge [fontname=Arial fontsize=10 penwidth=1.5]
+	A [label="Data
+(cleaned_2.csv)
+Real-world
+Accident Records" color="#DAA520" fillcolor="#FFD700" width=1.5]
+	B [label=Preprocessing color="#4682B4" fillcolor="#87CEEB" width=1.2]
+	C1 [label="Label Encoding
+(Categorical
+Features)
+For LightGBM" color="#2E8B57" fillcolor="#98FB98" width=1.5]
+	C2 [label="One-Hot Encoding
+(All Features)
+For SVM" color="#2E8B57" fillcolor="#98FB98" width=1.5]
+	D1 [label="LightGBM
+(Base Model)
+1500 Trees,
+Depth 6" color="#CD5C5C" fillcolor="#FFA07A" width=1.5]
+	D2 [label="SVM
+(Base Model)
+RBF Kernel,
+C=5" color="#CD5C5C" fillcolor="#FFA07A" width=1.5]
+	E [label="Stacking
+(Combine
+Predictions)
+LightGBM +
+SVM Outputs" color="#6A5ACD" fillcolor="#DDA0DD" width=1.5]
+	F [label="Random Forest
+(Meta-Model)
+150 Trees,
+Depth 8" color="#DAA520" fillcolor="#F0E68C" width=1.5]
+	G [label="Final Prediction
+(Accident
+Severity)
+Minor, Severe,
+Fatal" color="#228B22" fillcolor="#90EE90" width=1.5]
+	A -> B [label="Raw Data" color="#4682B4" fontcolor="#4682B4"]
+	B -> C1 [label="Categorical
+Features" color="#2E8B57" fontcolor="#2E8B57"]
+	B -> C2 [label="All Features" color="#2E8B57" fontcolor="#2E8B57"]
+	C1 -> D1 [label="X_unseen
+(Numeric)" color="#CD5C5C" fontcolor="#CD5C5C"]
+	C2 -> D2 [label="X_unseen_ohe
+(100 Features)" color="#CD5C5C" fontcolor="#CD5C5C"]
+	D1 -> E [label="Probability
+Scores" color="#6A5ACD" fontcolor="#6A5ACD"]
+	D2 -> E [label="Probability
+Scores" color="#6A5ACD" fontcolor="#6A5ACD"]
+	E -> F [label="Stacked
+Features" color="#DAA520" fontcolor="#DAA520"]
+	F -> G [label="Predicted
+Class" color="#228B22" fontcolor="#228B22"]
+}

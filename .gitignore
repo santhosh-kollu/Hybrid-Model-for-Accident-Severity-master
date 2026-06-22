@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Virtual Environment
+venv/
+ENV/
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# Catboost info directory
+catboost_info/
+
+# Large files that can be regenerated
+# Uncomment these if you want to exclude them due to size constraints
+# balanced_X_ohe.npy
+# balanced_X.csv 
+# balanced_y.csv
+# balanced_y_ohe.npy
+# lgb_model.txt
+# rf_meta_model.pkl
+# svm_model.pkl
+# realistic_balanced_accident_data.csv
+# cleaned_2.csv 
