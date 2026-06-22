@@ -29,4 +29,21 @@ The model is trained on a balanced accident dataset with features related to acc
 
 ## Performance
 
-The hybrid model shows improved performance compared to individual models in terms of accuracy and F1 score, particularly for minority classes in the accident severity prediction task. 
+The hybrid model shows improved performance compared to individual models in terms of accuracy and F1 score, particularly for minority classes in the accident severity prediction task.
+
+---
+
+## 👨‍💻 Developer & Contact
+
+Developed with passion and a commitment to building robust, explainable machine learning models. 
+
+<div align="left">
+  <strong>Santhosh Kollu</strong><br>
+  Machine Learning Developer & Data Scientist<br><br>
+  <a href="mailto:kollusanthosh01@gmail.com">
+    <img src="https://img.shields.io/badge/Email-kollusanthosh01@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+  </a>
+  <a href="https://www.linkedin.com/in/santhosh-kollu-b179812b3/">
+    <img src="https://img.shields.io/badge/LinkedIn-Santhosh_Kollu-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+  </a>
+</div>
